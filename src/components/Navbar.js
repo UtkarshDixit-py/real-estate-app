@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -12,6 +13,7 @@ const Navbar = () => {
         <Navitem href="#">Resources</Navitem>
       </NavListWrapper>
       <User>
+        <FavLink to="/fav">Favourites</FavLink>
         <button>Login</button>
       </User>
     </Conatiner>
@@ -37,7 +39,19 @@ const NavListWrapper = styled.nav`
 
 const User = styled.div`
   border: 2px solid blue;
+  display: flex;
+  align-items: center;
+
+  button {
+    margin: 10px;
+  }
 `;
+
+const FavLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 const Navitem = styled.a`
   margin: 10px;
   text-decoration: none;
