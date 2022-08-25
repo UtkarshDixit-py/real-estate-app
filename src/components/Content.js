@@ -4,7 +4,18 @@ import Search from "./Search";
 import Filters from "./Filters";
 import Properties from "./Properties";
 
+// import { useEffect , useState } from "react";
+
 const Content = () => {
+
+  // const [propList , setPropList] = useState([]);
+
+  // useEffect(()=>{
+  //   fetch(``)
+  //     .then((res)=>res.json())
+  //     .then((actualData)=>setPropList(actualData));
+  // },[])
+
   return (
     <Container>
       <Search />

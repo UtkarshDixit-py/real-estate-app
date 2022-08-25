@@ -13,7 +13,7 @@ const Navbar = () => {
         <Navitem href="#">Resources</Navitem>
       </NavListWrapper>
       <User>
-        <FavLink to="/fav">Favourites</FavLink>
+        <FavLink to="/fav">Favourites<sup>0</sup></FavLink>
         <button>Login</button>
       </User>
     </Conatiner>
