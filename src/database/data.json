@@ -1,0 +1,83 @@
+[
+      {
+        "id": 1,
+        "imgUrl":
+          "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607",
+        "name": "Palm Harbor",
+        "cost": 2095,
+        "address": "2699 Green Valley, Highland Lake, FL",
+        "isPopular": true,
+        "isLiked": false,
+        "beds": 3,
+        "baths": 2,
+        "area": "5x7m"
+        
+      },
+      {
+        "id": 2,
+        "imgUrl":
+          "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607",
+        "name": "Beverly Springfield",
+        "cost": 2700,
+        "address": "2821 Lake Sevilla, Palm Harbor, TX",
+        "isPopular": true,
+        "isLiked": false,
+        "beds": 4,
+        "baths": 2,
+        "area": "6x7.5m"
+      },
+      {
+        "id": 3,
+        "imgUrl":
+          "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607",
+        "name": "Faulkner Ave",
+        "cost": 4550,
+        "address": "909 Woodland St, Mitchigan, IN",
+        "isPopular": true,
+        "isLiked": false,
+        "beds": 4,
+        "baths": 3,
+        "area": "8x10m"
+      },
+      {
+        "id": 4,
+        "imgUrl":
+          "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607",
+        "name": "Palm Harbor",
+        "cost": 2095,
+        "address": "2699 Green Valley, Highland Lake, FL",
+        "isPopular": true,
+        "isLiked": false,
+        "beds": 3,
+        "baths": 2,
+        "area": "5x7m"
+        
+      },
+      {
+        "id": 5,
+        "imgUrl":
+          "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607",
+        "name": "Beverly Springfield",
+        "cost": 2700,
+        "address": "2821 Lake Sevilla, Palm Harbor, TX",
+        "isPopular": true,
+        "isLiked": false,
+        "beds": 4,
+        "baths": 2,
+        "area": "6x7.5m"
+      },
+      {
+        "id": 6,
+        "imgUrl":
+          "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607",
+        "name": "Faulkner Ave",
+        "cost": 4550,
+        "address": "909 Woodland St, Mitchigan, IN",
+        "isPopular": true,
+        "isLiked": false,
+        "beds": 4,
+        "baths": 3,
+        "area": "8x10m"
+      }
+    ]
+
