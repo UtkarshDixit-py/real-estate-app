@@ -2,23 +2,38 @@ import React from "react";
 import styled from "styled-components";
 // import PropertyItem from './PropertyItem';
 import data from "../database/data.json";
+import { useDispatch , useSelector} from "react-redux";
+import { addToFav, setProperty } from "../redux/actions/action";
+import { useEffect } from "react";
+
 
 const Properties = () => {
-  console.log(data.map((obj) => obj));
-  return (
+
+  const PropList = useSelector((state)=>state.userReducer.List);
+  return (  
     <Container>
      {
-      data.map((obj,i)=><PropertyItem {...obj} key={i}/>)
+      PropList.map((obj,i)=><PropertyItem {...obj} key={i}/>)
      }
     </Container>
   );
 };
 
-function PropertyItem({ name }) {
+function PropertyItem({ name , id}) {
+  const dispatch = useDispatch();
+  const favList = useSelector((state)=>state.userReducer.Favs)
+
+  function handleAddToFav(id){
+    dispatch(addToFav(id));
+    console.log(favList);
+    console.log(id)
+
+  }
+
   return (
     <PropertyContainer>
-      <p>{name}</p>
-      <button>Add to favourites</button>
+      <p>{name}</p> 
+      <button onClick={()=>handleAddToFav(id)}>Add to favourites</button>
     </PropertyContainer>
   );
 }

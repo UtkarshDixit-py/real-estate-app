@@ -5,19 +5,19 @@ import Filters from "./Filters";
 import Properties from "./Properties";
 
 import { useEffect , useState } from "react";
-import { useSelector , useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setProperty } from "../redux/actions/action";
 
 const Content = () => {
 
-   const propertyList = useSelector((state)=>state.userReducer.List);
    const dispatch = useDispatch();
 
-  useEffect(()=>{
-    fetch(``)
+   useEffect(()=>{
+    fetch(`https://mocki.io/v1/177fad1d-b9af-4208-91f6-d84621d21138`)
       .then((res)=>res.json())
-      .then((actualData)=>setProperty(actualData));
-  },[])
+      .then((actualData)=>dispatch(setProperty(actualData)));
+
+  },[]);
 
   return (
     <Container>

@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const favList = useSelector((state=>state.userReducer.Favs))
+
   return (
     <Conatiner>
       <Logo></Logo>
@@ -13,7 +16,7 @@ const Navbar = () => {
         <Navitem href="#">Resources</Navitem>
       </NavListWrapper>
       <User>
-        <FavLink to="/fav">Favourites<sup>0</sup></FavLink>
+        <FavLink to="/fav">Favourites<sup>{favList.length}</sup></FavLink>
         <button>Login</button>
       </User>
     </Conatiner>
