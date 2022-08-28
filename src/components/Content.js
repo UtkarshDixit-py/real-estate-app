@@ -4,20 +4,18 @@ import Search from "./Search";
 import Filters from "./Filters";
 import Properties from "./Properties";
 
-import { useEffect , useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setProperty } from "../redux/actions/action";
 
 const Content = () => {
+  const dispatch = useDispatch();
 
-   const dispatch = useDispatch();
-
-   useEffect(()=>{
-    fetch(`https://mocki.io/v1/177fad1d-b9af-4208-91f6-d84621d21138`)
-      .then((res)=>res.json())
-      .then((actualData)=>dispatch(setProperty(actualData)));
-
-  },[]);
+  useEffect(() => {
+    fetch(`https://mocki.io/v1/0066c442-504c-4972-bbba-1b96603d2ad6`)
+      .then((res) => res.json())
+      .then((actualData) => dispatch(setProperty(actualData)));
+  }, []);
 
   return (
     <Container>

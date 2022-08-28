@@ -2,38 +2,33 @@ import React from "react";
 import styled from "styled-components";
 // import PropertyItem from './PropertyItem';
 import data from "../database/data.json";
-import { useDispatch , useSelector} from "react-redux";
-import { addToFav, setProperty } from "../redux/actions/action";
-import { useEffect } from "react";
-
+import { useDispatch, useSelector } from "react-redux";
+import { addToFav } from "../redux/actions/action";
 
 const Properties = () => {
+  const PropList = useSelector((state) => state.userReducer.List);
 
-  const PropList = useSelector((state)=>state.userReducer.List);
-  return (  
+  return (
     <Container>
-     {
-      PropList.map((obj,i)=><PropertyItem {...obj} key={i}/>)
-     }
+      {PropList.map((obj, i) => (
+        <PropertyItem {...obj} key={i} />
+      ))}
     </Container>
   );
 };
 
-function PropertyItem({ name , id}) {
+function PropertyItem({ name, id }) {
   const dispatch = useDispatch();
-  const favList = useSelector((state)=>state.userReducer.Favs)
+  const favList = useSelector((state) => state.userReducer.Favs);
 
-  function handleAddToFav(id){
+  function handleAddToFav(id) {
     dispatch(addToFav(id));
-    console.log(favList);
-    console.log(id)
-
   }
 
   return (
     <PropertyContainer>
-      <p>{name}</p> 
-      <button onClick={()=>handleAddToFav(id)}>Add to favourites</button>
+      <p>{name}</p>
+      <button onClick={() => handleAddToFav(id)}>Add to favourites</button>
     </PropertyContainer>
   );
 }
@@ -54,5 +49,6 @@ const PropertyContainer = styled.div`
   font-size: 30px;
   text-align: center;
 `;
+
 
 export default Properties;
