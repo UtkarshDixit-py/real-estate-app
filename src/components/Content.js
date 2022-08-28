@@ -4,7 +4,7 @@ import Search from "./Search";
 import Filters from "./Filters";
 import Properties from "./Properties";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setProperty } from "../redux/actions/action";
 
@@ -27,7 +27,6 @@ const Content = () => {
 };
 
 const Container = styled.div`
-  border: 2px solid green;
   margin-top: 25px;
   margin-right: 15rem;
   margin-left: 15rem;
