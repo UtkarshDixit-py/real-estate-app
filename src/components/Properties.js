@@ -4,13 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToFav } from "../redux/actions/action";
 
 const Properties = () => {
-  const PropList = useSelector((state) => state.userReducer.List);
-
+  const propList = useSelector((state) => state.userReducer.List);
+  const searchedList = useSelector((state) => state.userReducer.searchedList);
+  const currentData = searchedList.length===0 ? propList : searchedList
   return (
     <Container>
-      {PropList.map((obj, i) => (
-        <PropertyItem {...obj} key={i} />
-      ))}
+      {currentData.map((obj, i) => <PropertyItem {...obj} key={i} />)}
     </Container>
 
     // SEMANTIC UI
@@ -33,7 +32,6 @@ function PropertyItem({ name, id, imgUrl, address, beds, baths, area }) {
   return (
     <PropertyContainer>
       <p>{name}</p>
-      {/* <img src={imgUrl} /> */}
       <button onClick={() => handleAddToFav(id)}>Add to favourites</button>
     </PropertyContainer>
 
@@ -66,7 +64,6 @@ const Container = styled.div`
   grid-template-columns: auto auto auto;
   row-gap: 12px;
   gap: 25px;
-
 
   padding: 50px 2px;
 `;

@@ -18,3 +18,10 @@ export const removeFromFav = (itemId) => {
     payload: itemId,
   };
 };
+
+export const searchPropertyList = (newList) =>{
+  return{
+    type:"SEARCH",
+    payload:newList
+  }
+}

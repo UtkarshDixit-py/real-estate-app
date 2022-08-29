@@ -2,6 +2,7 @@
 const initialState = {
   List: [],
   Favs: [],
+  searchedList:[]
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -24,6 +25,12 @@ export const userReducer = (state = initialState, action) => {
         ...state,
         Favs: state.Favs.filter((obj) => obj.id !== action.payload),
       };
+
+    case "SEARCH" :
+      return{
+        ...state,
+        searchedList : action.payload
+      }
 
     default:
       return state;
