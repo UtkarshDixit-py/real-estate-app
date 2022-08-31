@@ -11,8 +11,14 @@ import { setProperty } from "../redux/actions/action";
 const Content = () => {
   const dispatch = useDispatch();
 
+  // useEffect(() => {
+  //   fetch(`https://mocki.io/v1/0066c442-504c-4972-bbba-1b96603d2ad6`)
+  //     .then((res) => res.json())
+  //     .then((actualData) => dispatch(setProperty(actualData)));
+  // }, []);
+
   useEffect(() => {
-    fetch(`https://mocki.io/v1/0066c442-504c-4972-bbba-1b96603d2ad6`)
+    fetch(`https://mocki.io/v1/62e5c9fa-6084-46b6-aeb7-a0426a40a616`)
       .then((res) => res.json())
       .then((actualData) => dispatch(setProperty(actualData)));
   }, []);

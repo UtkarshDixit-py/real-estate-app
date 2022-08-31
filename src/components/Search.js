@@ -12,6 +12,7 @@ const Search = () => {
 
   const propertyList = useSelector((state)=>state.userReducer.List);
   const dispatch = useDispatch();
+  
   const search=(input)=>{
     const filteredPropertyList = propertyList.filter((propertyItem)=>{
       const {name, address } = propertyItem;

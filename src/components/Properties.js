@@ -6,7 +6,8 @@ import { addToFav } from "../redux/actions/action";
 const Properties = () => {
   const propList = useSelector((state) => state.userReducer.List);
   const searchedList = useSelector((state) => state.userReducer.searchedList);
-  const currentData = searchedList.length===0 ? propList : searchedList
+  const currentData = searchedList.length===0 ? propList : searchedList;
+
   return (
     <Container>
       {currentData.map((obj, i) => <PropertyItem {...obj} key={i} />)}
@@ -15,7 +16,7 @@ const Properties = () => {
     // SEMANTIC UI
     // <Container>
     //   <div class="ui three link cards">
-    //     {PropList.map((obj, i) => (
+    //     {currentData.map((obj, i) => (
     //       <PropertyItem {...obj} key={i} />
     //     ))}
     //   </div>
