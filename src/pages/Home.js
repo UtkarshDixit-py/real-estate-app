@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import Search from "./Search";
-import Filters from "./Filters";
-import Properties from "./Properties";
+import Search from "../components/Search";
+import Filters from "../components/Filters";
+import Properties from "../components/Properties";
 
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setProperty } from "../redux/actions/action";
 
-const Content = () => {
+const Home = () => {
   const dispatch = useDispatch();
 
   // useEffect(() => {
@@ -18,7 +18,7 @@ const Content = () => {
   // }, []);
 
   useEffect(() => {
-    fetch(`https://mocki.io/v1/62e5c9fa-6084-46b6-aeb7-a0426a40a616`)
+    fetch(`https://mocki.io/v1/f18f2f92-d960-4b72-b41e-7d9b237a50c0`)
       .then((res) => res.json())
       .then((actualData) => dispatch(setProperty(actualData)));
   }, []);
@@ -38,4 +38,4 @@ const Container = styled.div`
   margin-left: 15rem;
 `;
 
-export default Content;
+export default Home;

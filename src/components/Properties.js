@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import { addToFav } from "../redux/actions/action";
+import { addToFav , removeFromFav } from "../redux/actions/action";
 
 const Properties = () => {
   const propList = useSelector((state) => state.userReducer.List);
@@ -25,15 +25,33 @@ const Properties = () => {
 };
 
 function PropertyItem({ name, id, imgUrl, address, beds, baths, area }) {
+  
+  const [fav,setfav] = useState(false);
+  const changeFavButton = () => setfav(!fav)
+
   const dispatch = useDispatch();
   function handleAddToFav(id) {
+    changeFavButton();
     dispatch(addToFav(id));
+  }
+  function handleRemoveFromFav(id){
+    changeFavButton();
+    dispatch(removeFromFav(id))
   }
 
   return (
     <PropertyContainer>
       <p>{name}</p>
-      <button onClick={() => handleAddToFav(id)}>Add to favourites</button>
+      {
+        fav ? 
+        <button onClick={() => handleRemoveFromFav(id)}>Remove from favourites</button>
+        :
+        <button onClick={() => handleAddToFav(id)}>Add to favourites</button>
+        
+        
+      }
+
+      
     </PropertyContainer>
 
     // SEMANTIC UI

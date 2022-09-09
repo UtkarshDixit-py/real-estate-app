@@ -26,3 +26,10 @@ export const searchPropertyList = (newList) =>{
   }
 }
 
+export const filterPropertyList = (filterObj) =>{
+  return{
+    type:"FILTER",
+    payload:filterObj
+  }
+}
+

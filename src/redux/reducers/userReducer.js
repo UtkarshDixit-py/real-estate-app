@@ -2,7 +2,8 @@
 const initialState = {
   List: [],
   Favs: [],
-  searchedList:[]
+  searchedList:[],
+  filteredList:[]
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -30,6 +31,16 @@ export const userReducer = (state = initialState, action) => {
       return{
         ...state,
         searchedList : action.payload
+      }
+
+    case "FILTER" :
+      console.log(action.payload);
+
+      const {selectedTenantsPreferred ,selectedAmenities,selectedFurnishing} = action.payload;
+      
+
+      return{
+        ...state,
       }
 
     default:
