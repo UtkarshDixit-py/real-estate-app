@@ -18,7 +18,7 @@ const Home = () => {
   // }, []);
 
   useEffect(() => {
-    fetch(`https://mocki.io/v1/f18f2f92-d960-4b72-b41e-7d9b237a50c0`)
+    fetch(`https://mocki.io/v1/832b05c5-0560-41e0-ac71-549c30dec7f4`)
       .then((res) => res.json())
       .then((actualData) => dispatch(setProperty(actualData)));
   }, []);

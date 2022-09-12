@@ -154,27 +154,28 @@ const Filters = () => {
         </div>
       </Furnishing>
       <Apply>
-        <button onClick={(e)=>dispatch(filterPropertyList(collectedKeys))}>Apply</button>
+        <button class="ui  black button" onClick={(e)=>dispatch(filterPropertyList(collectedKeys))}>Apply</button>
       </Apply>
     </Container>
   );
 };
 
 const Container = styled.div`
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   display: flex;
   justify-content: space-between;
+  margin-bottom: 25px;
 `;
 
 const Type = styled.div`
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   display: flex;
   align-items: center;
   flex-direction: column;
 `;
 
 const Amenities = styled.div`
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -184,7 +185,7 @@ const Amenities = styled.div`
   }
 `;
 const Furnishing = styled.div`
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   display: flex;
   align-items: center;
   display: flex;
@@ -195,9 +196,10 @@ const Furnishing = styled.div`
   }
 `;
 const Apply = styled.div`
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   display: flex;
   align-items: center;
+
 `;
 
 export default Filters;

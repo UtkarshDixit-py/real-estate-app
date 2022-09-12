@@ -3,11 +3,14 @@
     "id": 1,
     "imgUrl":
       "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607",
-    "name": "Maya garden",
+    "name": "2 BHK Apartment For Rent in Savitri Enclave 2",
     "cost": 2095,
     "address": "2699 Green Valley, Highland Lake, FL",
-    "tenantsPreffered": "bachelors",
-    "amenities":"power backup",
+    "tenantsPreferred": "bachelors",
+    "amenities":[
+      "power backup",
+      "park"
+    ],
     "furnishing":"full furnished",
     "beds": 3,
     "baths": 2,
@@ -21,8 +24,11 @@
     "name": "2 BHK Apartment For Rent in Savitri Enclave",
     "cost": 2700,
     "address": "2821 Lake Sevilla, Palm Harbor, TX",
-    "tenantsPreffered": "family",
-    "amenities":"park",
+    "tenantsPreferred": "family",
+    "amenities":[
+      "power backup",
+      "gym"
+    ],
     "furnishing":"semi furnished",
     "isPopular": true,
     "beds": 4,
@@ -36,8 +42,11 @@
     "name": "2 BHK Apartment For Rent in Springdale Towers",
     "cost": 4550,
     "address": "909 Woodland St, Mitchigan, IN",
-    "tenantsPreffered": "bachelors",
-    "amenities":"gym",
+    "tenantsPreferred": "bachelors",
+    "amenities":[
+      "gym",
+      "park"
+    ],
     "furnishing":"unfurnished",
     "isPopular": true,
     "beds": 4,
@@ -51,8 +60,11 @@
     "name": "2 BHK Apartment For Rent in Highland Park Homes,",
     "cost": 2095,
     "address": "2699 Green Valley, Highland Lake, FL",
-    "tenantsPreffered": "family",
-    "amenities":"park",
+    "tenantsPreferred": "family",
+    "amenities":[
+      "power backup",
+      "gym"
+    ],
     "furnishing":"semi furnished",
     "isPopular": true,
     "beds": 3,
@@ -67,8 +79,12 @@
     "name": "2 BHK Apartment For Rent in Highland Park Homes",
     "cost": 2700,
     "address": "2821 Lake Sevilla, Palm Harbor, TX",
-    "tenantsPreffered": "bachelors",
-    "amenities":"power backup",
+    "tenantsPreferred": "bachelors",
+    "amenities":[
+      "power backup",
+      "park",
+      "gym"
+    ],
     "furnishing":"full furnished",
     "isPopular": true,
     "beds": 4,
@@ -82,8 +98,8 @@
     "name": "2 BHK Apartment for Rent in Savitry Apartments",
     "cost": 4550,
     "address": "909 Woodland St, Mitchigan, IN",
-    "tenantsPreffered": "family",
-    "amenities":"power backup",
+    "tenantsPreferred": "family",
+    "amenities":["power backup"],
     "furnishing":"unfurnished",
     "isPopular": true,
     "beds": 4,

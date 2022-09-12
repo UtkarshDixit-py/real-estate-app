@@ -38,6 +38,17 @@ export const userReducer = (state = initialState, action) => {
 
       const {selectedTenantsPreferred ,selectedAmenities,selectedFurnishing} = action.payload;
       
+      const newFilteredList = state.List.filter((item)=>selectedTenantsPreferred.name===item.tenantsPreferred)
+        
+      //  var filter = false;
+      //   if(typeof selectedTenantsPreferred!="undefined" ){
+      //     if(selectedTenantsPreferred.name===item.tenantsPreferred){
+      //       filter =true;
+      //     }
+          
+        
+      //)
+      console.log(newFilteredList);
 
       return{
         ...state,
