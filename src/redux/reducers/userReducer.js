@@ -38,8 +38,13 @@ export const userReducer = (state = initialState, action) => {
 
       const {selectedTenantsPreferred ,selectedAmenities,selectedFurnishing} = action.payload;
       
-      const newFilteredList = state.List.filter((item)=>selectedTenantsPreferred.name===item.tenantsPreferred)
-        
+      const filterOne = state.List.filter((item)=>item.tenantsPreferred===selectedTenantsPreferred.name)
+      const filterTwo = filterOne.filter((item)=>item.furnishing === selectedFurnishing.name)
+      
+      const filterLength = filterTwo.filter((item)=>item.amenities.length===selectedAmenities.length)
+      const filterThree = filterLength
+
+      console.log(filterTwo);
       //  var filter = false;
       //   if(typeof selectedTenantsPreferred!="undefined" ){
       //     if(selectedTenantsPreferred.name===item.tenantsPreferred){
@@ -48,10 +53,11 @@ export const userReducer = (state = initialState, action) => {
           
         
       //)
-      console.log(newFilteredList);
+      console.log(filterThree);
 
       return{
         ...state,
+        filteredList : filterTwo
       }
 
     default:

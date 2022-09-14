@@ -40,12 +40,12 @@ const Filters = () => {
   const [furnishingType , selectedFurnishingType] = useState([
     {
       id:1,
-      name:"semifurnished",
+      name:"semi furnished",
       label: "Semi Furnished"
     },
     {
       id:2,
-      name:"fullfurnished",
+      name:"full furnished",
       label: "Full Furnished"
     },
     {
@@ -59,7 +59,7 @@ const Filters = () => {
   const collectedKeys = {
     selectedTenantsPreferred: "",
     selectedAmenities: [],
-    selectedFurnishing: [],
+    selectedFurnishing: "",
   };
 
   // const [selectedAmenities,setSelectedAmenities] = useState([]);
@@ -84,13 +84,8 @@ const Filters = () => {
 
   var onFurnishSelect = (item,isChecked) =>{
     if (isChecked) {
-      collectedKeys.selectedFurnishing.push(item);
-    } else {
-      collectedKeys.selectedFurnishing =
-        collectedKeys.selectedFurnishing.filter(
-          (elem) => elem.id !== item.id
-        );
-    }
+      collectedKeys.selectedFurnishing = item;
+    } 
   }
 
   return (
@@ -106,7 +101,7 @@ const Filters = () => {
                   <div class="ui radio checkbox">
                     <input
                       type="radio"
-                      name="frequency"
+                      name="tenants"
                       onChange={(e) => onSelectTenantType(item, e.target.checked)}
                     />
                     <label>{label}</label>
@@ -142,7 +137,8 @@ const Filters = () => {
                 return (
                   <div>
               <input
-                type="checkbox"
+                type="radio"
+                name="furnish"
                 onChange={(e) => onFurnishSelect(item, e.target.checked)}
               />
               <label>{label}</label>

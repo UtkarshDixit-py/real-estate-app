@@ -22,7 +22,7 @@ const Navbar = () => {
     //     <button>Login</button>
     //   </User>
     // </Conatiner>
-    <Conatiner>
+    <Container>
     <div class="ui huge menu">
       <a class="active item">Home</a>
 
@@ -36,11 +36,11 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-    </Conatiner>
+    </Container>
   );
 };
 
-const Conatiner = styled.div`
+const Container = styled.div`
   /* border: 2px solid red; */
   width: 100%;
   padding-left:10%;

@@ -6,7 +6,11 @@ import { addToFav, removeFromFav } from "../redux/actions/action";
 const Properties = () => {
   const propList = useSelector((state) => state.userReducer.List);
   const searchedList = useSelector((state) => state.userReducer.searchedList);
-  const currentData = searchedList.length === 0 ? propList : searchedList;
+  const filteredList = useSelector((state)=>state.userReducer.filteredList);
+  // const currentData = searchedList.length === 0 ? propList : searchedList;
+
+  const currentData = searchedList.length === 0 ? filteredList.length=== 0 ? propList: filteredList : searchedList;
+
 
   console.log(currentData);
 
@@ -63,6 +67,9 @@ function PropertyItem({ name, id, imgUrl, address, beds, baths, area ,tenantsPre
       <img class="right floated medium ui image" src={imgUrl} />
         <div class="header">{name}</div>
         <div class="ui tag labels">
+          <a class="ui label">
+            {furnishing}
+          </a>
           <a class="ui label">
             {tenantsPreferred}
           </a>
